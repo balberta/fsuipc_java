@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/FSUIPC_Servlet/WEB-INF/lib/commons-lang-2.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/FSUIPC_Servlet/WEB-INF/lib/jackson-jaxrs-1.9.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/FSUIPC_Servlet/WEB-INF/lib/jackson-mapper-asl-1.9.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/FSUIPC_Servlet/WEB-INF/lib/jersey-core-1.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/FSUIPC_Servlet/WEB-INF/lib/spring-expression-3.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/FSUIPC_Servlet/WEB-INF/lib/spring-core-3.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/FSUIPC_Servlet/WEB-INF/lib/spring-aop-3.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/FSUIPC_Servlet/WEB-INF/lib/spring-webmvc-3.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/FSUIPC_Servlet/WEB-INF/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/FSUIPC_Servlet/WEB-INF/lib/json-20090211.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/FSUIPC_Servlet/WEB-INF/lib/fsuipc-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/FSUIPC_Servlet/WEB-INF/lib/jackson-core-asl-1.9.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/FSUIPC_Servlet/WEB-INF/lib/aopalliance-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/FSUIPC_Servlet/WEB-INF/lib/spring-context-3.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/FSUIPC_Servlet/WEB-INF/lib/spring-web-3.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/FSUIPC_Servlet/WEB-INF/lib/spring-beans-3.2.3.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir= "..\" name="fsuipcWrapper" default="init">
+    <property  name="src_dir" value="src"/>
+    <property name="build_dir" value="build"/>
+    <!--<property location="artifacts" name="artifacts\fsuipcWrapper.jar"/>-->
+    <property location="doc" name="doc"/>
+    <property name="classpath" value="."/>
+    <property name="targetOutput" value="${build_dir}\artifacts"/>
+    <property name="version" value="1.0"/>
+
+    <target name="init">
+        <!-- Create the time stamp -->
+        <tstamp/>
+        <!-- Create the build directory structure used by compile -->
+        <mkdir dir="${build_dir}"/>
+        <mkdir dir="${targetOutput}"/>
+        <mkdir dir="${doc}"/>
+    </target>
+
+
+    <target depends="init" description="Compile the source " name="compile">
+        <!-- Compile the java code from ${src} into ${build} -->
+        <javac destdir="${build_dir}" srcdir="${src_dir}">
+            <classpath path="${classpath}">
+                <fileset dir="artifacts">
+                    <exclude name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+    <target depends="compile" name="package">
+        <jar basedir="${build_dir}" jarfile="${targetOutput}\fsuipc-${version}.jar"/>
+    </target>
+
+    <target depends = "init" name="doc">
+        <javadoc
+                destdir="${doc}"
+                author="true"
+                version="true"
+                use="true"
+                windowtitle="FSUIPC API">
+
+            <fileset dir="${src_dir}" defaultexcludes="yes">
+                <include name="com/flightsim/**" />
+            </fileset>
+
+            <doctitle><![CDATA[<h1>FSUIPC</h1>]]></doctitle>
+            <bottom><![CDATA[<i>Copyright &#169; 2003 Mark Burton. All Rights Reserved.</i>]]></bottom>
+            <tag name="todo" scope="all" description="To do:" />
+            <group title="Group 1 Packages" packages="com.dummy.test.a*"/>
+            <group title="Group 2 Packages" packages="com.dummy.test.b*:com.dummy.test.c*"/>
+            <link offline="true" href="http://java.sun.com/products/jdk/1.2/docs/api/" packagelistLoc="C:\tmp"/>
+            <link href="http://developer.java.sun.com/developer/products/xml/docs/api/"/>
+        </javadoc>
+    </target>
+
+    <target depends="package" name="signatureGeneration">
+        <javah class="com.flightSim.wrapper.Signature" classpath="${build_dir}" destdir="..\artifacts"/>
+    </target>
+
+    <target name="clean" description="Clean intermediates">
+        <delete>
+            <fileset dir="${build_dir}"/>
+        </delete>
+    </target>
+
+</project>
